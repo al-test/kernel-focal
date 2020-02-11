@@ -1445,6 +1445,17 @@ enum drm_dp_quirk {
 	 * The driver should honor the DPCD backlight capabilities advertised.
 	 */
 	DP_DPCD_QUIRK_FORCE_DPCD_BACKLIGHT,
+	/**
+	 * @DP_QUIRK_FORCE_DPCD_BACKLIGHT:
+	 *
+	 * The device is telling the truth when it says that it uses DPCD
+	 * backlight controls, even if the system's firmware disagrees. This
+	 * quirk should be checked against both the ident and panel EDID.
+	 * When present, the driver should honor the DPCD backlight
+	 * capabilities advertised.
+	 */
+	DP_QUIRK_FORCE_DPCD_BACKLIGHT,
+
 };
 
 /**
